@@ -19,8 +19,8 @@ os:
 env:
   global:
     - PATH="/usr/local/opt/llvm/bin:/usr/lib/llvm-6.0/bin/:$PATH"
-    - LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-    - CPPFLAGS="-I/usr/local/opt/llvm/include"
+    - LIBFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+    - CXXFLAGS="-I/usr/local/opt/llvm/include"
 script:
   - clang --version
   - make test
