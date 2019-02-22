@@ -10,15 +10,18 @@ addons:
       - g++-7
   homebrew:
     brewfile: true
-compiler:
-  - gcc
-  - clang
-os:
-  - linux
-  - osx
+matrix:
+  include:
+    - os: osx
+      env: CXX=g++-7
+    - os: osx
+      env: CXX=clang-6
+    - os: linux
+      env: CXX=clang-6
+    - os: linux
+      env: CXX=g++-7
 env:
   global:
-    - PATH="/usr/local/opt/llvm/bin:/usr/lib/llvm-6.0/bin/:$PATH"
     - LIBFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
     - CXXFLAGS="-I/usr/local/opt/llvm/include"
 script:
