@@ -15,5 +15,5 @@ os:
   - linux
   - osx
 env:
-  global: PATH="/usr/local/opt/llvm/bin:$PATH"
+  global: PATH="/usr/local/opt/llvm/bin:/usr/lib/llvm-6.0/bin/:$PATH"
 script: make test
