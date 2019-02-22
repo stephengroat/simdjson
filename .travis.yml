@@ -1,6 +1,11 @@
 language: cpp
 dist: xenial
 addons:
+  apt:
+    sources:
+      - llvm-toolchain-xenial-6.0
+    packages:
+      - clang-6.0
   homebrew:
     brewfile: true
 os:
