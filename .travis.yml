@@ -8,7 +8,12 @@ addons:
       - clang-6.0
   homebrew:
     brewfile: true
+compiler:
+  - gcc
+  - clang
 os:
   - linux
   - osx
+env:
+  global: PATH="/usr/local/opt/llvm/bin:$PATH"
 script: make test
