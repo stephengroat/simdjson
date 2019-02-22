@@ -4,8 +4,10 @@ addons:
   apt:
     sources:
       - llvm-toolchain-xenial-6.0
+      - ubuntu-toolchain-r-test
     packages:
       - clang-6.0
+      - g++-7
   homebrew:
     brewfile: true
 compiler:
