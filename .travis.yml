@@ -1,5 +1,8 @@
 language: cpp
 dist: xenial
+addons:
+  homebrew:
+    brewfile: true
 os:
   - linux
   - osx
